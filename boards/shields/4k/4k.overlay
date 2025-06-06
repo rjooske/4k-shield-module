@@ -1,0 +1,19 @@
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+
+    kscan0: kscan0 {
+        compatible = "zmk,kscan-gpio-direct";
+        debounce-press-ms = 0;
+        poll-period-ms = 1;
+        wakeup-source;
+
+        input-gpios
+            = <&pro_micro 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            ;
+    };
+};

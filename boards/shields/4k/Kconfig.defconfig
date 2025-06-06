@@ -1,0 +1,7 @@
+if SHIELD_4K
+
+config ZMK_KEYBOARD_NAME
+    default "4k"
+CONFIG_ZMK_KSCAN_DIRECT_POLLING=y
+
+endif
